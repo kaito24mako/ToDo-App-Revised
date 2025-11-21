@@ -64,15 +64,16 @@ button {
   --font-primary: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
 
   /* colors */
-  --primary-color: hsl(0, 0%, 12%);
-  --secondary-color: hsl(0, 0%, 80%);
+  --primary-color: hsl(0, 0%, 80%);
+  --secondary-color: hsl(0, 0%, 12%);
   --accent-color: hsl(0, 0%, 40%);
 
   /* font sizes */
-  --vlarge: 1.5rem;
-  --large: 1rem;
-  --medium: 0.8rem;
-  --small: 0.5rem;
+  --vlarge: 2rem;
+  --large: 1.5rem;
+  --medium: 1rem;
+  --small: 0.8rem;
+  --vsmall: 0.5rem;
 
   /* spacing */
   --spacing-vlarge: 2rem;
@@ -80,11 +81,6 @@ button {
   --spacing-medium: 1rem;
   --spacing-small: 0.5rem;
   --spacing-vsmall: 0.2rem;
-
-  /* container widths */
-  --width-sidebar: 220px;
-  --width-form: 240px;
-  --width-input: 175px;
 
   /* shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -96,5 +92,85 @@ button {
 
 body {
   display: flex;
-  background-color: var(--black-light);
+  flex-direction: column;
+  align-items: center;
+
+  gap: 15px;
+  min-height: 100dvh;
+
+  padding: 50px 20px;
+
+  background-color: var(--secondary-color);
 }
+
+/* ==== Header ==== */
+
+header {
+  font-size: var(--vlarge);
+  color: var(--primary-color);
+}
+
+/* ==== Create task ==== */
+
+#input-container form {
+  display: flex;
+  justify-content: space-between;
+
+  width: 260px;
+
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+#input-container input {
+  width: 75%;
+  padding-left: 3px;
+  color: var(--primary-color);
+}
+
+#input-container input:focus {
+  outline: none;
+}
+
+#input-container button {
+  padding: 3px 4px 5px 10px;
+
+  color: black;
+  font-weight: 500;
+
+  background-color: var(--accent-color);
+  border-bottom-left-radius: 30px;
+}
+
+/* ==== Todo list ==== */
+
+#todo-list-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  width: 330px;
+
+  color: var(--primary-color);
+}
+
+#todo-list-container .todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid var(--primary-color);
+  border-radius: 3px;
+}
+
+#todo-list-container input,
+#todo-list-container label,
+#todo-list-container span,
+#todo-list-container button {
+  padding-bottom: 2px;
+}
+
+#todo-list-container label {
+  padding-right: 60px;
+}
+
