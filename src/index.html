@@ -5,5 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Revised ToDo App</title>
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <h1>Task Tracker</h1>
+    </header>
+
+    <div id="input-container">
+      <form>
+        <input id="todo-input" type="text" placeholder="Start writing and press enter to create task" autocomplete="off">
+        <button id="todo-add-btn" type="submit">Add</button>
+      </form>
+    </div>
+
+    <ul id="todo-list-container">
+      <!--- Create with DOM : -->
+      <li class="todo">
+        <input id="todo-1" type="checkbox">
+        <label class="todo-text" for="todo-1">
+          create todo app
+        </label>
+        <span class="todo-date" for="todo-1">
+          Mon, December 2nd
+        </span>
+        <button id="todo-delete-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black">
+            <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </body>
 </html>
