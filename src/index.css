@@ -179,6 +179,12 @@ header {
 
   border-bottom: 2px solid var(--accent-color);
   border-radius: 3px;
+
+  transition: opacity 0.3s ease;
+}
+
+#todo-list-container .todo.completed {
+  opacity: 0.3;
 }
 
 #todo-list-container input,
@@ -200,4 +206,78 @@ header {
 #todo-list-container button:hover {
   transform: rotate(10deg);
 }
+
+/* ==== Edit task form ==== */
+
+dialog {
+  border: none;
+  background: transparent;
+  overflow: visible;
+  z-index: 10; 
+}
+
+dialog[open] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+dialog::backdrop {
+  background-color: (0, 0, 0, 0.5);
+}
+
+#edit-task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200px;
+
+  gap: var(--spacing-medium);
+  padding: var(--spacing-medium) 0;
+
+  color: var(--primary-color);
+  background-color: hsl(0, 0%, 17%);
+  border-radius: 10px;
+
+  box-shadow: 2px 3px 10px hsl(0, 0%, 14%);
+}
+
+#edit-task-form h2 {
+  font-size: 1.2rem;
+}
+
+#edit-task-form input {
+  padding: 4px 3px;
+
+  width: 80%;
+
+  color: var(--primary-color);
+  outline: none;
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+#edit-task-form #buttons {
+  display: flex;
+  gap: var(--spacing-small);
+
+  font-size: var(--small)
+}
+
+#edit-task-form button {
+  padding: 4px 6px;
+
+  border-radius: 10px;
+}
+
+#edit-task-form #cancel-btn {
+  background-color: rgb(99, 9, 9);
+}
+
+#edit-task-form #save-btn {
+  background-color: rgb(11, 100, 11);
+}
+
 
