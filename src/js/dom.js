@@ -1,9 +1,10 @@
 import { handleTaskEvents } from "../index.js";
 
-const taskContainer = document.querySelector("#todo-list-container");
-
 function formatDate(dateString) {
   const date = new Date(dateString);
+
+  if (!dateString) return "No due date";
+
   return date.toLocaleDateString("en-AU", {
     weekday: "short",
     day: "2-digit",
@@ -12,6 +13,8 @@ function formatDate(dateString) {
 }
 
 export function renderTasks(arr) {
+  const taskContainer = document.querySelector("#todo-list-container");
+
   taskContainer.innerHTML = "";
 
   for (let i = 0; i < arr.length; i++) {
@@ -46,7 +49,6 @@ export function renderTasks(arr) {
     taskContainer.appendChild(task);
     task.append(taskStatus, taskLabel, taskDate, taskDeleteBtn);
 
-    // handleFormEvents(currentTask, taskLabel);
     handleTaskEvents(currentTask, task, taskStatus, taskLabel, taskDeleteBtn);
   }
 }
