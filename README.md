@@ -2,6 +2,8 @@
 
 A general template repository according to the Revisiting Webpack section of The Odin Project.
 
+Live Preview: https://kaito24mako.github.io/ToDo-App-Revised/
+
 ## Skills
 
 **HTML and CSS**
