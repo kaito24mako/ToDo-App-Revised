@@ -1,7 +1,9 @@
 # ToDo App: Revised Edition
 
 A revised version of the ToDo App project, as outlined by The Odin Project.
+
 I kept it as minimal as posssible to reduce the scope of the project, so that I can focus on the areas that I need improvement in.
+
 I hope you enjoy it!
 
 ## Live Preview
