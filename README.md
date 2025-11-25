@@ -1,6 +1,6 @@
-# Basic Template
+# ToDo App: Revised Edition
 
-A general template repository according to the Revisiting Webpack section of The Odin Project.
+A revised version of the ToDo App project, as outlined by The Odin Project.
 
 Live Preview: https://kaito24mako.github.io/ToDo-App-Revised/
 
